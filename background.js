@@ -7,8 +7,8 @@ const turboMode = () => {
         } else {
             paragraph.innerHTML = paragraph.innerText.split(' ').map((word) => {
                 const length = word.replace(/[^a-zA-Z0-9]+$/, '').length
-                const boldedLength = length === 1 ? 1 : Math.floor(length / 2)
-                return `<strong className="trms">${word.substring(0, boldedLength)}</strong>${word.substring(boldedLength)}`
+                const boldLength = length === 1 ? 1 : Math.floor(length / 2)
+                return `<strong>${word.substring(0, boldLength)}</strong>${word.substring(boldLength)}`
             }).join(' ');
         }
     }
